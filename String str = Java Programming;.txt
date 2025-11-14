@@ -1,0 +1,36 @@
+String str = "Java Programming";
+        int v=0, c=0;
+        str = str.toLowerCase();
+
+        for(char ch : str.toCharArray()){
+            if("aeiou".indexOf(ch) != -1) v++;
+            else if(ch >= 'a' && ch <= 'z') c++;
+        }
+        System.out.println("Vowels: " + v);
+        System.out.println("Consonants: " + c);
+
+MatirxApplication
+
+int[][] A = { {1, 2, 3},
+                      {4, 5, 6} };
+
+        int[][] B = { {7, 8},
+                      {9, 10},
+                      {11, 12} };
+
+        int rows = A.length, cols = B[0].length, col = B.length;
+        int[][] result = new int[rows][cols];
+
+        // multiplication logic
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                for (int k = 0; k < col; k++)
+                    result[i][j] += A[i][k] * B[k][j];
+
+        // display result using foreach
+        System.out.println("Result Matrix:");
+        for (int[] row : result) {
+            for (int val : row)
+                System.out.print(val + " ");
+            System.out.println();
+        }
